@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="employes.views.WelcomePage"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout BackgroundColor="#FFE5B5"
+                 VerticalOptions="FillAndExpand">
+
+        <Label Text="Employes SYS"
+               HorizontalOptions="Center"
+               TextColor="#000"
+               FontSize="20"
+               Margin="0, 25, 0, 10"
+               TextTransform="Uppercase"
+               FontAttributes="Bold" />
+
+        <Frame VerticalOptions="FillAndExpand"
+               Margin="15,10"
+               CornerRadius="8">
+            
+            <StackLayout VerticalOptions="Center">
+                <Image Source="https://www.pngall.com/wp-content/uploads/5/Employment-PNG-Pic.png"
+                       WidthRequest="250"
+                       Margin="15, 5" />
+
+                <Label Text="En la presente aplicación movil podras realizar un CRUD de los empelados de la empresa."
+                       Margin="15, 10"
+                       TextColor="#333"
+                       FontAttributes="Italic"
+                       HorizontalTextAlignment="Center" />
+
+                <Button Text="Ingresar"
+                        CornerRadius="10"
+                        BackgroundColor="#fdcb6e"
+                        x:Name="btnIngresar"
+                        Clicked="btnIngresar_Clicked" />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

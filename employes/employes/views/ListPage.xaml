@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="employes.views.ListPage"
+             Title="Lista de Empleados">
+
+    <StackLayout BackgroundColor="#FFE5B5"
+                 VerticalOptions="FillAndExpand">
+
+        <Button Text="Añadir"
+                CornerRadius="10"
+                BackgroundColor="#74b9ff"
+                Margin="15, 5"
+                x:Name="btnAdd"
+                Clicked="btnAdd_Clicked" />
+
+        <ListView x:Name="ListEmployes"
+                  HasUnevenRows="True"
+                  Margin="5"
+                  Opacity="0.8">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid Margin="5, 10, 5, 10" Background="#333" Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20"></RowDefinition>
+                                    <RowDefinition Height="25"></RowDefinition>
+                                    <RowDefinition Height="35"></RowDefinition>
+                                    <RowDefinition Height="45"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Label Text="{Binding cedula}"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="End"
+                                       FontSize="15"
+                                       FontAttributes="Bold"
+                                       TextColor="#fff"
+                                       Padding="15, 0"
+                                       Grid.Column="0"
+                                       Grid.Row="0"
+                                       Grid.ColumnSpan="2" />
+
+                                <Label Text="{Binding name_completo}"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Start"
+                                       FontSize="17"
+                                       FontAttributes="Italic,Bold"
+                                       TextColor="#00b894"
+                                       Padding="15, 0"
+                                       Grid.Column="0"
+                                       Grid.Row="1"
+                                       Grid.ColumnSpan="2" />
+
+                                <Label Text="{Binding salario}"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"
+                                       FontSize="25"
+                                       FontAttributes="Bold"
+                                       TextColor="#fff"
+                                       Padding="15, 0"
+                                       Grid.Column="0"
+                                       Grid.Row="2"
+                                       Grid.ColumnSpan="2"/>
+
+                                <Button Text="Editar"
+                                        FontSize="9"
+                                        FontAttributes="Bold,Italic"
+                                        BackgroundColor="#686de0"
+                                        Margin="35, 5"
+                                        CornerRadius="15"
+                                        Grid.Column="0"
+                                        Grid.Row="3" 
+                                        CommandParameter="{Binding cedula}"
+                                        x:Name="btnEdit"
+                                        Clicked="btnEdit_Clicked"/>
+
+                                <Button Text="Eliminar"
+                                        FontSize="9"
+                                        FontAttributes="Bold,Italic"
+                                        BackgroundColor="#eb4d4b"
+                                        Margin="35, 5"
+                                        CornerRadius="15"
+                                        Grid.Column="1"
+                                        Grid.Row="3"
+                                        CommandParameter="{Binding cedula}"
+                                        x:Name="btnDelete"
+                                        Clicked="btnDelete_Clicked"/>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
+</ContentPage>

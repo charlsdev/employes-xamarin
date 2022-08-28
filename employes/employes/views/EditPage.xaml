@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="employes.views.EditPage"
+             Title="Actualizar Empleado"
+             BackgroundColor="#FFE5B5">
+
+    <ContentPage.Content>
+        <StackLayout Margin="25, 15">
+            <Label Text="Cédula"
+                   FontSize="Medium"
+                   TextColor="#000"
+                   FontAttributes="Bold" />
+            <Entry Placeholder="Ingrese la cédula"
+                   TextColor="#000"
+                   FontAttributes="Italic"
+                   FontSize="17"
+                   ClearButtonVisibility="WhileEditing"
+                   x:Name="ipt_Cedula"
+                   Keyboard="Numeric"
+                   IsEnabled="False"
+                   MaxLength="10" />
+
+            <Label Text="Apellidos"
+                   FontSize="Medium"
+                   TextColor="#000"
+                   FontAttributes="Bold" />
+            <Entry Placeholder="Ingrese los apellidos"
+                   TextColor="#000"
+                   FontAttributes="Italic"
+                   FontSize="17"
+                   ClearButtonVisibility="WhileEditing"
+                   x:Name="ipt_Apellidos"
+                   Keyboard="Text"
+                   MaxLength="30" />
+
+            <Label Text="Nombres"
+                   FontSize="Medium"
+                   TextColor="#000"
+                   FontAttributes="Bold" />
+            <Entry Placeholder="Ingrese los nombres"
+                   TextColor="#000"
+                   FontAttributes="Italic"
+                   FontSize="17"
+                   ClearButtonVisibility="WhileEditing"
+                   x:Name="ipt_Nombres"
+                   Keyboard="Text"
+                   MaxLength="30" />
+
+            <Label Text="Salario"
+                   FontSize="Medium"
+                   TextColor="#000"
+                   FontAttributes="Bold" />
+            <Entry Placeholder="Ingrese el salario"
+                   TextColor="#000"
+                   FontAttributes="Italic"
+                   FontSize="17"
+                   ClearButtonVisibility="WhileEditing"
+                   x:Name="ipt_Salario"
+                   Keyboard="Numeric"
+                   MaxLength="7" />
+
+            <Button Text="Actualizar"
+                    CornerRadius="10"
+                    BackgroundColor="#74b9ff"
+                    Margin="25, 15"
+                    x:Name="btnUpdate"
+                    Clicked="btnUpdate_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

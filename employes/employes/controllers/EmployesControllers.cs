@@ -13,7 +13,8 @@ namespace employes.controllers
 {
     public class EmployesControllers
     {
-        string urlAPI = "http://192.168.100.86:4000/api";
+        //string urlAPI = "http://192.168.100.86:4000/api";
+        string urlAPI = "https://api-employes.onrender.com/api";
 
         public async Task<bool> SaveEmploye(string ced, string ape, string nom, string sal)
         {
